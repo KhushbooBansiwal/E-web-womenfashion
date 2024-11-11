@@ -1,6 +1,9 @@
 import React  from "react";
 import img1 from "../assets/img1.jpg"
 import FeaturedProducts from "../components/featuredProducts";
+import Testimonials from "../components/testimonials";
+import Newsletter from "../components/newsletter";
+import Footer from "../components/footer";
 
 const Home = () => {
     return(
@@ -23,6 +26,9 @@ const Home = () => {
                 </div>
             </section>
             <FeaturedProducts />
+            <Testimonials />
+            <Newsletter />
+<Footer />
             
         </div>
     )

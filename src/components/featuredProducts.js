@@ -14,7 +14,7 @@ const FeaturedProducts = () => {
     const updatedState = [...added];
     updatedState[index] = true;
     setAdded(updatedState);
-    // Add further logic to handle adding product to cart
+    
   };
 
   return (
