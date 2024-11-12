@@ -26,8 +26,7 @@ const Footer = () => {
     <div>
       <h3 className="text-lg font-semibold text-white mb-4">Stay Updated</h3>
       <p>Subscribe to our newsletter for the latest trends and offers.</p>
-      <input type="email" placeholder="Your email" className="mt-4 p-2 rounded border-green-400"/>
-      <button className="bg-green-600 text-white px-4 py-2 mt-2 rounded transition-transform hover:scale-105">Subscribe</button>
+      
     </div>
 
    
