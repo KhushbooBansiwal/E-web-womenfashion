@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useCart } from "../contexts/cardcontext"; // Import the useCart hook
+import { useSelector } from 'react-redux';
+
 import { FaShoppingCart } from 'react-icons/fa'; // Import the cart icon from react-icons
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { cartCount } = useCart(); // Get cart count from the context
-
+  const totalQuantity = useSelector((state) =>
+    state.cart.items.reduce((acc, item) => acc + item.quantity, 0)
+  );
+  
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -22,12 +25,10 @@ const Navbar = () => {
           <Link to="/products" className="hover:text-gray-300 transition">Products</Link>
           <Link to="/cart" className="hover:text-gray-300 transition flex items-center">
             <FaShoppingCart className="mr-1" />
-            Cart
-            {cartCount > 0 && (
-              <span className="bg-red-500 text-white rounded-full text-xs px-2 ml-2">
-                {cartCount}
-              </span>
-            )}
+            {totalQuantity > 0 && (
+          <span className="absolute top-0 right-0 bg-red-500 text-white rounded-full px-1 text-xs">{totalQuantity}</span>
+        )}
+        
           </Link>
           <Link to="/login" className="hover:text-gray-300 transition">Login</Link>
         </div>
@@ -42,17 +43,16 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-green-700 text-white space-y-4 mt-4 p-4">
+        <div className="md:hidden bg-green-700 text-white space-y-4 mt-3 p-3">
           <Link to="/" className="block hover:text-gray-300 transition">Home</Link>
           <Link to="/products" className="block hover:text-gray-300 transition">Products</Link>
           <Link to="/cart" className="flex items-center hover:text-gray-300 transition">
             <FaShoppingCart className="mr-1" />
-            Cart
-            {cartCount > 0 && (
+            {totalQuantity > 0 && (
+          <span className="absolute top-0 right-0 bg-red-500 text-white rounded-full px-1 text-xs">{totalQuantity}</span>
+        )}
               <span className="bg-red-500 text-white rounded-full text-xs px-2 ml-2">
-                {cartCount}
               </span>
-            )}
           </Link>
           <Link to="/login" className="block hover:text-gray-300 transition">Login</Link>
         </div>
