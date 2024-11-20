@@ -22,13 +22,13 @@ const cartSlice = createSlice({
           totalPrice: item.price,
         });
       }
-      state.totalQuantity += 1; // Increment total quantity
+      state.totalQuantity += 1;
     },
     removeItemFromCart(state, action) {
       const itemId = action.payload;
       const existingItem = state.items.find((item) => item.id === itemId);
       if (existingItem) {
-        state.totalQuantity -= existingItem.quantity; // Decrease total quantity by item quantity
+        state.totalQuantity -= existingItem.quantity; 
         state.items = state.items.filter((item) => item.id !== itemId);
       }
     },
@@ -36,7 +36,7 @@ const cartSlice = createSlice({
       const { id, quantity } = action.payload;
       const item = state.items.find((i) => i.id === id);
       if (item) {
-        state.totalQuantity += quantity - item.quantity; // Adjust total quantity
+        state.totalQuantity += quantity - item.quantity; 
         item.quantity = quantity;
         item.totalPrice = item.price * quantity;
       }

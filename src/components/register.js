@@ -9,7 +9,6 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle register logic here
   };
 
   return (
@@ -18,7 +17,12 @@ const Register = () => {
         <h2 className="text-2xl font-bold text-center mb-6">Create Account</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Email
+            </label>
             <input
               type="email"
               id="email"
@@ -31,7 +35,12 @@ const Register = () => {
           </div>
 
           <div className="mb-4">
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700">Password</label>
+            <label
+              htmlFor="password"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Password
+            </label>
             <input
               type="password"
               id="password"
@@ -44,7 +53,12 @@ const Register = () => {
           </div>
 
           <div className="mb-4">
-            <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">Confirm Password</label>
+            <label
+              htmlFor="confirmPassword"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Confirm Password
+            </label>
             <input
               type="password"
               id="confirmPassword"
@@ -66,7 +80,10 @@ const Register = () => {
 
         <p className="mt-4 text-center">
           Already have an account?{" "}
-          <Link to="/login" className="text-green-500 hover:text-green-600 transition-all duration-300">
+          <Link
+            to="/login"
+            className="text-green-500 hover:text-green-600 transition-all duration-300"
+          >
             Login
           </Link>
         </p>

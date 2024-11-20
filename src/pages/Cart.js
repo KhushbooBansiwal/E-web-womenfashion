@@ -7,7 +7,7 @@ const Cart = () => {
   const dispatch = useDispatch();
 
   const subtotal = cartItems.reduce((acc, item) => acc + item.totalPrice, 0);
-  const tax = (subtotal * 0.1).toFixed(2); // 10% tax
+  const tax = (subtotal * 0.1).toFixed(2); 
   const total = (subtotal + parseFloat(tax)).toFixed(2);
 
   return (
@@ -17,7 +17,7 @@ const Cart = () => {
         <p className="text-center text-gray-500 text-lg">Your cart is empty.</p>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Cart Items */}
+        
           <div className="col-span-2 space-y-4">
             {cartItems.map((item) => (
               <div
@@ -59,7 +59,7 @@ const Cart = () => {
             ))}
           </div>
 
-          {/* Order Summary */}
+  
           <div className="bg-gray-50 p-6 shadow rounded-lg">
             <h3 className="text-xl font-bold text-gray-800 mb-4">Order Summary</h3>
             <div className="flex justify-between text-gray-600 mb-2">

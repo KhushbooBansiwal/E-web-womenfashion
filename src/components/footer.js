@@ -6,13 +6,13 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-gray-300 py-8">
   <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-    {/* Logo & Mission */}
+ 
     <div>
       <h2 className="text-white text-2xl font-bold mb-4">Fashionista</h2>
       <p>Discover quality fashion curated just for you.</p>
     </div>
 
-    {/* Quick Links */}
+  
     <div>
       <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
       <ul>
@@ -22,7 +22,7 @@ const Footer = () => {
       </ul>
     </div>
 
-    {/* Newsletter Signup */}
+    
     <div>
       <h3 className="text-lg font-semibold text-white mb-4">Stay Updated</h3>
       <p>Subscribe to our newsletter for the latest trends and offers.</p>
@@ -36,8 +36,7 @@ const Footer = () => {
       <p>+000000000</p>
       <p>support@fashionista.com</p>
       <div className="mt-4">
-     
-      {/* Social Media */}
+   
       <div className="flex space-x-4 mt-4 md:mt-0">
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
             <FaFacebook className="text-white hover:text-gray-300 text-2xl" />

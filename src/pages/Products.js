@@ -10,7 +10,7 @@ const ProductPage = () => {
   const dispatch = useDispatch();
   const [mainImage, setMainImage] = useState(pimg1);
   const [productName, setProductName] = useState("Jacket");
-  const [productPrice, setProductPrice] = useState(2999); // Price as a number
+  const [productPrice, setProductPrice] = useState(2999); 
 
   const handleImageClick = (image, name, price) => {
     setMainImage(image);
@@ -24,7 +24,7 @@ const ProductPage = () => {
     alert(`${name} added to cart!`);
   };
 
-  // Product data with numeric prices
+
   const products = [
     { image: pimg1, name: "Jacket", price: 2999 },
     { image: pimg2, name: "Girl Woolen Top", price: 3499 },
@@ -35,7 +35,7 @@ const ProductPage = () => {
   return (
     <div className="max-w-7xl mx-auto p-6">
       <div className="flex flex-col lg:flex-row gap-6">
-        {/* Product Image Section */}
+      
         <div className="w-full lg:w-1/2">
           <img
             src={mainImage}
@@ -57,7 +57,7 @@ const ProductPage = () => {
           </div>
         </div>
 
-        {/* Product Info Section */}
+       
         <div className="w-full lg:w-1/2 space-y-6">
           <h1 className="text-3xl font-semibold text-gray-800 transition-colors duration-300 ease-in-out hover:text-green-600">
             {productName}
@@ -80,7 +80,7 @@ const ProductPage = () => {
         </div>
       </div>
 
-      {/* Related Products Section */}
+    
       <div className="mt-12">
         <h2 className="text-2xl font-semibold text-gray-800 transition-colors duration-300 ease-in-out hover:text-green-600">
           Related Products

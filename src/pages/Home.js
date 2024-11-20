@@ -6,11 +6,11 @@ import Newsletter from "../components/newsletter";
 import Footer from "../components/footer";
 
 const Home = () => {
-  const featuredProductsRef = useRef(null); // Create a reference for the FeaturedProducts section
+  const featuredProductsRef = useRef(null);
 
   const handleShopNow = () => {
     if (featuredProductsRef.current) {
-      featuredProductsRef.current.scrollIntoView({ behavior: "smooth" }); // Smooth scroll to the section
+      featuredProductsRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -23,10 +23,8 @@ const Home = () => {
           backgroundImage: `url(${img1})`,
         }}
       >
-        {/* Overlay */}
         <div className="absolute inset-0 bg-green-700 opacity-40"></div>
 
-        {/* Content */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-4">
             Discover Your Style
@@ -36,7 +34,7 @@ const Home = () => {
           </p>
           <button
             aria-label="Shop Now"
-            onClick={handleShopNow} // Add click handler
+            onClick={handleShopNow}
             className="bg-white text-green-700 font-semibold px-6 py-2 rounded-full transition-transform duration-300 ease-in-out hover:bg-green-600 hover:text-white hover:scale-105"
           >
             Shop Now
@@ -44,18 +42,14 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Featured Products Section */}
       <div ref={featuredProductsRef}>
         <FeaturedProducts />
       </div>
 
-      {/* Testimonials Section */}
       <Testimonials />
 
-      {/* Newsletter Section */}
       <Newsletter />
 
-      {/* Footer */}
       <Footer />
     </div>
   );

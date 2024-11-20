@@ -1,18 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Newsletter = () => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
 
   const handleSignup = () => {
     alert(`Subscribed with: ${email}`);
-    setEmail('');
+    setEmail("");
   };
 
   return (
     <section className="bg-gray-200 py-8 px-4">
       <div className="max-w-xl mx-auto text-center">
         <h2 className="text-2xl font-bold mb-4">Stay Updated</h2>
-        <p className="text-gray-600 mb-6">Sign up for exclusive deals, updates, and more.</p>
+        <p className="text-gray-600 mb-6">
+          Sign up for exclusive deals, updates, and more.
+        </p>
         <div className="flex items-center justify-center">
           <input
             type="email"
