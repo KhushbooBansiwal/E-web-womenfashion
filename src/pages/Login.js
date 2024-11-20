@@ -11,15 +11,18 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // Simple validation
     if (!email || !password) {
-      setError("Please enter both email and password");
+      setError("Please enter both email and password.");
       return;
     }
 
+    // Simulated authentication
     if (email === "test@example.com" && password === "password") {
-      navigate("/");
+      setError(""); // Clear error if login is successful
+      navigate("/"); // Redirect to home page
     } else {
-      setError("Invalid email or password");
+      setError("Invalid email or password.");
     }
   };
 

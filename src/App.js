@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import Products from "./pages/Products";
 import Cart from "./pages/Cart";
 import Login from "./pages/Login";
- import Register from "./pages/Register";
+ import Register from "./components/register";
 import Navbar from "./components/navbar"; 
 
 const App = () => {
